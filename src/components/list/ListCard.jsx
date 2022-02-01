@@ -24,7 +24,7 @@ const ListCard = ({ items }) => {
         alt="green iguana"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography gutterBottom variant="h6" component="div">
           {items.title.charAt(0).toUpperCase() +
             items.title.substr(1).toLowerCase()}
           {/* {items.title} */}
