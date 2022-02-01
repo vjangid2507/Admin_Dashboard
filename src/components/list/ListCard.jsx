@@ -10,8 +10,8 @@ const ListCard = ({ items }) => {
   return (
     <Card
       sx={{
-        maxWidth: 355,
-        minWidth: 355,
+        maxWidth: 275,
+        minWidth: 275,
         maxHeight: 300,
         minHeight: 300,
         backgroundColor: "#efefef",
@@ -19,7 +19,7 @@ const ListCard = ({ items }) => {
     >
       <CardMedia
         component="img"
-        height="140"
+        height="150"
         image={items.image}
         alt="green iguana"
       />

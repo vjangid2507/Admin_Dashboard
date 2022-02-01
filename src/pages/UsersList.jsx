@@ -18,6 +18,7 @@ const data = new Array(5000).fill().map((key) => ({
 
 const UsersList = () => {
   const columnCount = 4;
+  console.log(window.innerWidth);
   const cell = ({ columnIndex, rowIndex, style }) => (
     // <Grid container style={style}>
     //   <Grid item key={data[rowIndex].id}>
@@ -38,11 +39,13 @@ const UsersList = () => {
 
       <FixedSizeGrid
         columnCount={columnCount}
-        columnWidth={373}
+        columnWidth={285}
         rowCount={Math.floor(data.length / 4)}
         rowHeight={320}
         height={600}
-        width={1510}
+        width={window.innerWidth - 382}
+        // width={1150}
+        // width={window.innerWidth - 400}
       >
         {cell}
       </FixedSizeGrid>
