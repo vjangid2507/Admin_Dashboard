@@ -16,7 +16,8 @@ const data = new Array(5000).fill().map((key) => ({
   ,${faker.name.findName()}`,
 }));
 
-const UsersList = () => {
+const UsersList = (props) => {
+  document.title = props.title;
   const columnCount = 4;
   console.log(window.innerWidth);
   const cell = ({ columnIndex, rowIndex, style }) => (

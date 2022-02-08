@@ -1,7 +1,8 @@
 import React from "react";
 import { Box } from "@mui/material";
 
-const Home = () => {
+const Home = (props) => {
+  document.title = props.title;
   const handleChange = (e) => {
     console.log(e.target.value);
   };

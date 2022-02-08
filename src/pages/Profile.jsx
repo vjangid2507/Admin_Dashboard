@@ -6,7 +6,8 @@ import styles from "../css/Profile.module.css";
 import ProfileCard from "../components/profile/ProfileCard";
 import AboutCard from "../components/profile/AboutCard";
 
-const Profile = () => {
+const Profile = (props) => {
+  document.title = props.title;
   return (
     <Box className={styles.box}>
       <Box>

@@ -9,7 +9,8 @@ import StepThree from "../components/form/StepThree";
 import { useForm, FormProvider } from "react-hook-form";
 import { chip } from "../utils/DropDownItems";
 
-const Forms = () => {
+const Forms = (props) => {
+  document.title = props.title;
   const [defaultChecked, setDefaultChecked] = useState(["Car", "MotorBike"]);
   const defaultChip = chip;
   const [activeStep, setActiveStep] = useState(0);
