@@ -20,8 +20,8 @@ import { Link } from "react-router-dom";
 import RoutesFiles from "../../RoutesFiles";
 import {
   pagesItems,
-  // elementsItems,
-  // materialAppItems,
+  elementsItems,
+  materialAppItems,
 } from "../../utils/DrawerItemsList";
 import { hasChildren } from "../../utils/utils";
 
@@ -61,7 +61,7 @@ const SideBar = (props) => {
           {openElement ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
         <Collapse in={openElement} timeout="auto" unmountOnExit>
-          <List component="div">
+          <List component="div" sx={{ pl: 2 }}>
             {item.items.map((child, key) => {
               return <RecursiveDrawerItems key={key} item={child} />;
             })}
@@ -89,18 +89,18 @@ const SideBar = (props) => {
       {pagesItems.map((item, key) => (
         <RecursiveDrawerItems key={key} item={item} />
       ))}
-      {/* <ListSubheader component="div" id="nested-list-subheader">
+      <ListSubheader component="div" id="nested-list-subheader">
         Elements
       </ListSubheader>
       {elementsItems.map((item, key) => (
         <RecursiveDrawerItems key={key} item={item} />
-      ))} */}
-      {/* <ListSubheader component="div" id="nested-list-subheader">
+      ))}
+      <ListSubheader component="div" id="nested-list-subheader">
         Material App
       </ListSubheader>
       {materialAppItems.map((item, key) => (
         <RecursiveDrawerItems key={key} item={item} />
-      ))} */}
+      ))}
       <Toolbar></Toolbar>
     </div>
   );

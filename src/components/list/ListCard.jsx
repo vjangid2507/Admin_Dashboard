@@ -10,8 +10,8 @@ const ListCard = ({ items }) => {
   return (
     <Card
       sx={{
-        maxWidth: 275,
-        minWidth: 275,
+        maxWidth: 355,
+        minWidth: 355,
         maxHeight: 300,
         minHeight: 300,
         backgroundColor: "#efefef",
@@ -19,12 +19,12 @@ const ListCard = ({ items }) => {
     >
       <CardMedia
         component="img"
-        height="150"
+        height="140"
         image={items.image}
         alt="green iguana"
       />
       <CardContent>
-        <Typography gutterBottom variant="h6" component="div">
+        <Typography gutterBottom variant="h5" component="div">
           {items.title.charAt(0).toUpperCase() +
             items.title.substr(1).toLowerCase()}
           {/* {items.title} */}

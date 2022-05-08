@@ -1,12 +1,12 @@
-/* .box{
+.box{
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     border: 2px solid white;
     border-radius: 10px;
-} */
-/* .form{
-    background-color: rgb(192, 218, 240);
+}
+.form{
+    /* background-color: rgb(192, 218, 240); */
     background-color: white;
     padding: 20px;
-} */
+}

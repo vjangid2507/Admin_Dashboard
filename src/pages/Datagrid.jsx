@@ -5,8 +5,7 @@ import { rows, columns } from "../utils/DataGridItems";
 import PageHeader from "../components/pages/PageHeader";
 import DividerHorizontal from "../components/pages/DividerHorizontal";
 
-const Datagrid = (props) => {
-  document.title = props.title;
+const Datagrid = () => {
   const [row, setRow] = useState(5);
   const pageSizeChangeHandler = (e) => {
     setRow(e);

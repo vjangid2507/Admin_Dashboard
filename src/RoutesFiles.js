@@ -21,14 +21,11 @@ const RoutesFiles = () => {
       >
         <Toolbar />
         <Routes>
-          <Route path="/" element={<Home title="Home" />} />
-          <Route
-            path="/tables/dataGrid"
-            element={<Datagrid title="Data-Grid" />}
-          />
-          <Route path="/pages/profile" element={<Profile title="Profile" />} />
-          <Route path="/forms" element={<Forms title="Form" />} />
-          <Route path="/list" element={<UsersList title="Users-List" />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/tables/dataGrid" element={<Datagrid />} />
+          <Route path="/pages/profile" element={<Profile />} />
+          <Route path="/forms" element={<Forms />} />
+          <Route path="/list" element={<UsersList />} />
         </Routes>
         {/* <Toolbar /> */}
       </Box>

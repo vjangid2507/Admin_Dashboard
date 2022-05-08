@@ -16,10 +16,8 @@ const data = new Array(5000).fill().map((key) => ({
   ,${faker.name.findName()}`,
 }));
 
-const UsersList = (props) => {
-  document.title = props.title;
+const UsersList = () => {
   const columnCount = 4;
-  console.log(window.innerWidth);
   const cell = ({ columnIndex, rowIndex, style }) => (
     // <Grid container style={style}>
     //   <Grid item key={data[rowIndex].id}>
@@ -40,13 +38,11 @@ const UsersList = (props) => {
 
       <FixedSizeGrid
         columnCount={columnCount}
-        columnWidth={285}
+        columnWidth={373}
         rowCount={Math.floor(data.length / 4)}
         rowHeight={320}
         height={600}
-        width={window.innerWidth - 382}
-        // width={1150}
-        // width={window.innerWidth - 400}
+        width={1510}
       >
         {cell}
       </FixedSizeGrid>

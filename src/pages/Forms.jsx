@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Button } from "@mui/material";
 import profileStyles from "../css/Profile.module.css";
+import styles from "../css/Forms.module.css";
 import PageHeader from "../components/pages/PageHeader";
 import DividerHorizontal from "../components/pages/DividerHorizontal";
 import StepOne from "../components/form/StepOne";
@@ -9,8 +10,7 @@ import StepThree from "../components/form/StepThree";
 import { useForm, FormProvider } from "react-hook-form";
 import { chip } from "../utils/DropDownItems";
 
-const Forms = (props) => {
-  document.title = props.title;
+const Forms = () => {
   const [defaultChecked, setDefaultChecked] = useState(["Car", "MotorBike"]);
   const defaultChip = chip;
   const [activeStep, setActiveStep] = useState(0);
@@ -60,42 +60,47 @@ const Forms = (props) => {
         <PageHeader title="Sign-Up Form" />
         <DividerHorizontal />
       </Box>
-      <FormProvider {...methods}>
-        <form onSubmit={methods.handleSubmit(onSubmit)}>
-          {getStepContent(activeStep)}
-          {activeStep > 0 && activeStep <= 2 && (
-            <Button
-              variant="contained"
-              onClick={handlePrev}
-              sx={{ margin: "5px" }}
-            >
-              Prev
-            </Button>
-          )}
+      <Box className={styles.box}>
+        <FormProvider {...methods}>
+          <form
+            onSubmit={methods.handleSubmit(onSubmit)}
+            className={styles.form}
+          >
+            {getStepContent(activeStep)}
+            {activeStep > 0 && activeStep <= 2 && (
+              <Button
+                variant="contained"
+                onClick={handlePrev}
+                sx={{ margin: "5px" }}
+              >
+                Prev
+              </Button>
+            )}
 
-          {activeStep < 2 && (
-            <Button
-              type="submit"
-              variant="contained"
-              color="primary"
-              sx={{ margin: "5px" }}
-            >
-              Next
-            </Button>
-          )}
+            {activeStep < 2 && (
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                sx={{ margin: "5px" }}
+              >
+                Next
+              </Button>
+            )}
 
-          {activeStep === 2 && (
-            <Button
-              type="submit"
-              variant="contained"
-              color="primary"
-              sx={{ margin: "5px" }}
-            >
-              Finish
-            </Button>
-          )}
-        </form>
-      </FormProvider>
+            {activeStep === 2 && (
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                sx={{ margin: "5px" }}
+              >
+                Finish
+              </Button>
+            )}
+          </form>
+        </FormProvider>
+      </Box>
     </Box>
   );
 };
